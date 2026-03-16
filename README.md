@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExb3VpaGpsZ3g5aWR1MmNvNHpkazJkcGd5OGM3a3RlOTd2NGd6aTJzZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/H8KNP9qOES0M5ldqWw/giphy.gif" width="100%" alt="Matrix Structural Analysis Banner">
+  <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExb3VpaGpsZ3g5aWR1MmNvNHpkazJkcGd5OGM3a3RlOTd2NGd6aTJzZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/H8KNP9qOES0M5ldqWw/giphy.gif" width="100%" alt="Seismic Desing Banner">
 </p>
 
 # Seismic-Resistant Design
