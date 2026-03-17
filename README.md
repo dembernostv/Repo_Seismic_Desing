@@ -84,16 +84,18 @@ This helps avoid confusion with terminal commands, file paths, and virtual envir
 
 Once the Windows terminal is open, run:
 
+```bash
     git clone https://github.com/Normando1945/Repo_Seismic_Desing.git
+```
 
 This command will download the repository to the current folder.
 
 ### Step 3. Move into the repository folder
 
 After cloning the repository, enter the project folder with:
-
+```bash
     cd Repo_Seismic_Desing
-
+```
 From this point on, all commands should be executed inside this folder.
 
 ### Step 4. Open the repository in Visual Studio Code
