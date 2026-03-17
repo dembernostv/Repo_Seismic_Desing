@@ -300,7 +300,7 @@ If students wish to experiment with the code, they are encouraged to do so in th
 If you use this repository in academic work, class projects, reports, or educational material, please cite it as follows.
 
 ### BibTeX
-```bash
+
     @misc{celi2026seismicdesign,
       author       = {Carlos Andrés Celi Sánchez},
       title        = {Seismic-Resistant Design: Educational Repository for Seismic Design and Structural Engineering},
@@ -309,7 +309,7 @@ If you use this repository in academic work, class projects, reports, or educati
       journal      = {GitHub repository},
       howpublished = {\url{https://github.com/Normando1945/Repo_Seismic_Desing}}
     }
-```
+
 ### APA (7th Edition)
 
 Celi Sánchez, C. A. (2026). *Seismic-Resistant Design: Educational Repository for Seismic Design and Structural Engineering* [Structural Engineering]. GitHub. https://github.com/Normando1945/Repo_Seismic_Desing
