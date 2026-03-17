@@ -34,11 +34,12 @@ class Simple_free_motion():
             ti[j] = t
             j = j+1
 
-        x_df = pd.DataFrame(x, columns= ['Amplitude'])
-        ti_df = pd.DataFrame(ti, columns= ['Time'])
-        resul = pd.concat([ti_df, x_df], axis=1, ignore_index=False)
+        # x_df = pd.DataFrame(x, columns= ['Amplitude'])
+        # ti_df = pd.DataFrame(ti, columns= ['Time'])
+        # resul = pd.concat([ti_df, x_df], axis=1, ignore_index=False)
         
-        return x, ti, resul
+        # return x, ti, resul
+        return x, ti
 
 #########################################################################################################################################
 #########################################################################################################################################
@@ -60,7 +61,7 @@ class plt_amp_tim():
         title = self.title
         #------------------------- PLOTS -----------------------------#
         fig, ax = plt.subplots(1,1, figsize = (20,5))
-        ax.plot(ti, x, color = color, lw = 1, ls = '-', marker = 'o', markersize = 2, label = 'Response Amplitude')
+        ax.plot(ti, x, color = color, alpha = 0.5 ,lw = 1, ls = '-', marker = 'o', markersize = 0, label = 'Response Amplitude')
         ax.set_title(title, fontsize = 12, color = [0,0,1], fontweight = 'bold')
         ax.set_ylabel('Response Amplitude')
         ax.set_xlabel('Time [s]')
