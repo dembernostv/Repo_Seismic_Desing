@@ -43,22 +43,27 @@ class Simple_free_motion():
 #########################################################################################################################################
 
 class plt_amp_tim():
-    def __init__(self, x, ti, color = [0, 0, 0], title = 'Amplitude vs Time'):
+    def __init__(self, x = any, ti = any, color = [0, 0, 0], title = 'Amplitude vs Time',
+                 ylabel = 'Amplitude', grl = 1):
         self.x = x
         self.ti = ti
         self.color = color
         self.title = title
+        self.ylabel = ylabel
+        self.grl = grl
 
     def plot_Avst(self):
         x = self.x
         ti = self.ti
         color = self.color
         title = self.title
+        ylabel = self.ylabel
+        grl = self.grl
         #------------------------- PLOTS -----------------------------#
         fig, ax = plt.subplots(1,1, figsize = (20,5))
-        ax.plot(ti, x, color = color, alpha = 0.5 ,lw = 1, ls = '-', marker = 'o', markersize = 0, label = 'Response Amplitude')
+        ax.plot(ti, x, color = color, alpha = 0.5 ,lw = grl, ls = '-', marker = 'o', markersize = 0, label = ylabel)
         ax.set_title(title, fontsize = 12, color = [0,0,1], fontweight = 'bold')
-        ax.set_ylabel('Response Amplitude')
+        ax.set_ylabel(ylabel)
         ax.set_xlabel('Time [s]')
         ax.grid(visible= True, axis= 'x')
         ax.set_xlim(ti[0], ti[-1])
