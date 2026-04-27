@@ -172,17 +172,31 @@ class Step_by_Step_BNewmark():
     def plot_seis_Raccel(self, xan1, at):
         TI = self.TI
         SG = self.SG
+        T = self.T
+        zi = self.zi
         colorSeism = self.colorSeism
         colorRaccel = self.colorRaccel
         colorRTaccel = self.colorRTaccel
         
+        maxSG = np.max(np.abs(SG))
+        TI_maxSG = TI[np.argmax(np.abs(SG))]
+        
+        maxAT = np.max(np.abs(at))
+        TI_maxAT = TI[np.argmax(np.abs(at))]
+        
         fig, ax = plt.subplots(2,1, figsize = (20,10))
+        fig.suptitle(f"B-Newmark, Solver", fontsize=18, color = (0,0,1), y=0.98)
+        
         ax[0].plot(TI, SG, color = colorSeism, alpha = 1.0 ,lw = 1.0, ls = '-', marker = 'o', 
                 markersize = 0, label = 'Seismic Record')
+        ax[0].plot(TI_maxSG, SG[np.argmax(np.abs(SG))], color = colorSeism, alpha = 1.0 ,lw = 1.0, ls = '-', marker = 'o', 
+                markersize = 5, label = f'PGA = {maxSG:.4f} [g], t = {TI_maxSG:.4f} [s]')
+        ax[0].set_title('Seismic Record')
         ax[0].set_ylabel('Acceleration [g]')
         ax[0].set_xlabel('Time [s]')
         ax[0].grid(visible= True, axis= 'x')
         ax[0].set_xlim(TI[0], TI[-1])
+        ax[0].legend(loc='best')
         
         ax[1].plot(TI, SG, color = colorSeism, alpha = 1.0 ,lw = 1.0, ls = '-', marker = 'o', 
                 markersize = 0, label = 'Seismic Record')
@@ -190,6 +204,9 @@ class Step_by_Step_BNewmark():
                 markersize = 0, label = 'Acceleration Response')
         ax[1].plot(TI, at, color = colorRTaccel, alpha = 1.0 ,lw = 1.0, ls = '--', marker = 'o', 
                 markersize = 0, label = 'Total Acceleration Response')
+        ax[1].plot(TI_maxAT, at[np.argmax(np.abs(at))], color = colorRTaccel, alpha = 1.0 ,lw = 1.0, ls = '-', marker = 'o', 
+                markersize = 5, label = f'maxAT = {maxAT:.4f} [g], t = {TI_maxAT:.4f} [s]')
+        ax[1].set_title(f'Acceleration Response, T = {T:.2f} [s], zi = {zi * 100:.2f} [%]')
         ax[1].set_ylabel('Acceleration [g]')
         ax[1].set_xlabel('Time [s]')
         ax[1].grid(visible= True, axis= 'x')
